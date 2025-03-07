@@ -23,7 +23,14 @@ for (key in teams) {
     const team = teams[key]
     team.points = generateRndmNum(50)
     team.fouls = generateRndmNum(50)
-    finalArray.push(team.name , team.fouls)
+
+}
+
+for (key in teams) {
+
+    const team = teams[key]
+    finalArray.push({ name: team.name, fouls: team.fouls })
+
 }
 
 console.log(finalArray)
