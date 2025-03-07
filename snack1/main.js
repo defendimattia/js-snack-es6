@@ -11,15 +11,15 @@ const bicyclesList = [
     { name: "Salsa Warbird", weight: 8.1 }
 ]
 
-let maxWeight = { name: "init", weight: 0 }
+let maxWeight = { name: "init", weight: 99 }
 
 for (let key in bicyclesList) {
 
     const bicycleObj = bicyclesList[key]
     const bicycleWeight = bicycleObj.weight
 
-    if (bicycleWeight > maxWeight.weight) maxWeight = bicycleObj
+    if (bicycleWeight < maxWeight.weight) maxWeight = bicycleObj
 
 }
 
-console.log(`La bicicletta più pesante è: ${maxWeight.name}, che pesa: ${maxWeight.weight} Kg`)
+console.log(`La bicicletta più leggera è: ${maxWeight.name}, che pesa: ${maxWeight.weight} Kg`)
